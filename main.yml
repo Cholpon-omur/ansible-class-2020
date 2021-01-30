@@ -29,4 +29,5 @@
 
   - name: Install MySQL
     include_tasks: mysql.yml
-    when: local_mysql
+    when: false
+    
