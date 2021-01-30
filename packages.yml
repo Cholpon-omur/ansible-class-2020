@@ -8,7 +8,7 @@
   - name: install telnet
     package: 
       name: "{{item}}"
-      state: present
+      state: present   #latest  #absent  #restarted
     with_items: 
     - telnet
     - gzip
