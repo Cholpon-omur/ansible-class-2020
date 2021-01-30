@@ -6,15 +6,14 @@
   user: centos
   tasks: 
 
-  - name: user add bob
+  - name: add users
     user: 
-      name: bob
-      comment: "john smith"
-      groups: wheel 
-      generate_ssh_key: yes 
-      state: present 
-  - name: user add lisa
-    user: 
-      name: lisa
-      state: absent
+      name: "{{item}}"
+      state: present
+    with_items:
+    - bob
+    - lisa
+    - sam
+    
+ 
  
